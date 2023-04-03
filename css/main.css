@@ -1,0 +1,213 @@
+:root{
+  /* Primary colours */
+  --gelos-gold: rgb(221,171,94);
+  --gelos-bronze: rgb(160,132,99);
+  --gelos-charcoal: rgb(66,71,84);
+  --gelos-blue: rgb(7,122,153);
+
+  /* Supplementary colours */
+  --gelos-gold-shade: rgb(208,139,32);
+  --gelos-gold-tint: rgb(238,213,174);
+  --gelos-blue-tint: rgb(148,178,191);
+  --gelos-blue-tint-a: rgba(148,178,191,0.3);
+
+  /* Effect variables */
+  --text-shadow: 0 0 10px rgba(0,0,0,0.1);
+  --backdrop-blur: 30px;
+  --section-radius: 25px;
+  --section-margin: 10px 50px;
+  --input-indent-padding: 15px;
+  --line-height: 1.5em;
+}
+
+*{
+  scroll-behavior: smooth;
+  margin: 0;
+  padding:0;
+}
+body{
+  background: var(--gelos-charcoal);
+  font-family: Calibri, Segoe, "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100vw;
+}
+header{
+  background: rgba(0,0,0,0.6);
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(var(--backdrop-blur)) saturate(120%);
+  -webkit-backdrop-filter: blur(var(--backdrop-blur)) saturate(120%);
+  transition: height 0.3s ease;
+}
+header li{
+  padding: 0 10px;
+}
+h1, h2{
+  font-family: Georgia, Calibri, Segoe, "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+h2{
+  font-size: 2rem;
+  font-weight: 900;
+}
+h3{
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+footer p{
+  margin-top: 10px;
+}
+footer{
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 50px 0 80px 0;
+}
+.header-logo{
+  position: absolute;
+  width: 30px;
+  margin: 8px 0 0 20px;
+}
+.header-logo-text{
+  position: absolute;
+  margin-left: 65px;
+  font-family: Georgia;
+  transform: scale(1.2, 0.9);
+  letter-spacing: 1px;
+  line-height: 15px;
+  margin-top: 9px;
+}
+#logo-gelos{
+  color: var(--gelos-gold);
+  font-size: 18px;
+}
+#logo-enterprises{
+  color: #fff;
+  font-size: 14px;
+}
+.menu-link{
+  text-decoration: none;
+  color: #eee;
+}
+.menu-link:hover{
+  text-decoration: none;
+  color: #fff;
+}
+.visually-hidden{
+  font-size: 1px;
+  height: 0;
+  width: 0;
+  position: absolute;
+  overflow: hidden;
+  left: -500px;
+  top: -500px;
+}
+.display-none{
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.error-message{
+  font-size: 0.9rem;
+  color: rgb(255,50,60);
+  font-weight: 600;
+  margin-top: -16px;
+  text-align: center;
+}
+.section-container-general{
+  max-width: 1100px;
+  margin: auto;
+}
+.header-large{
+  height: 220px;
+  transition: 0.5s ease;
+}
+.menu-x{
+  fill: #fff;
+  position: absolute;
+  right: 50px;
+  margin-top: 15px;
+  width: 18px;
+  transition: transform 0.3s ease;
+}
+#x-hamburger{
+  margin-top: 15px;
+}
+#x-hamburger:checked ~ ul{
+  margin-left: 0px;
+  animation: opacity 1s 1 0.5s ease forwards;
+}
+.x-checkbox{
+ opacity: 0;
+ width: 18px;
+ height: 18px;
+ right: 50px;
+ margin-top: 25px;
+ position: absolute;
+ z-index: 100;
+ cursor: pointer;
+}
+.x-checkbox:checked ~ .x-svg{
+ transform: rotate(45deg) !important;
+ transition: transform 0.3s ease;
+}
+#nav-list{
+  color: #fff;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  height: 20px;
+}
+#search-box{
+  background: rgba(230,230,255,0.1);
+  border-radius: 10px;
+  color: #fff;
+  min-height: 22px;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+  font-family: inherit;
+  font-weight: 600;
+}
+#search-box::placeholder{
+  color: rgba(255,255,255,0.75);
+}
+#search-box:focus{
+  box-shadow: 0 0 0 2px #fff;
+}
+
+@keyframes opacity{
+  to{
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  #nav-list{
+    opacity: 0;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    height: 150px;
+    padding-top: 50px;
+    width: 100%;
+    margin-left: 1000px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  #x-hamburger{
+    display: none;
+  }
+  #x-hamburger-svg{
+    display: none;
+  }
+  #nav-list{
+    justify-content: space-between;
+    max-width: 720px;
+    position: absolute;
+    right: 10px;
+    padding: 15px 0;
+    align-items: center;
+  }
+}

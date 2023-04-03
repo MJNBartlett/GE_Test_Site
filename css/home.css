@@ -1,0 +1,337 @@
+/* Section 1 Start */
+#section-1{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #fff;
+  margin: auto;
+}
+#section-1-container{
+  width: 100%;
+}
+#carousel-container{
+  width: 110vw;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+}
+#section-1-carousel{
+  overflow-x: scroll;
+  height: 440px;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#section-1-carousel::-webkit-scrollbar{
+  display: none;
+}
+.carousel-slide{
+  min-width: 550px;
+  width: 100%;
+  max-width: 750px;
+  height: 400px;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: right;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+  background-color: var(--gelos-charcoal);
+}
+.carousel-slide > h3{
+  margin: 20px 20px 50px 0;
+  text-shadow: 2px 2px 25px rgba(0,0,0,0.9);
+  font-size: 2rem;
+}
+.carousel-blank{
+  width: 80px;
+  min-width: 20px;
+  max-width: 120px;
+  height: 400px;
+  scroll-snap-align: start;
+}
+.carousel-link{
+  color: white;
+  text-decoration: none;
+  background: rgba(160,51,59,0.9);
+  padding: 8px 15px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.carousel-link:hover{
+  text-decoration: underline;
+  background: rgba(160,51,59,1);
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+  transition: 0.2s ease;
+}
+#carousel-slide-1{
+  background: url('../images/slide1.png') top right;
+  background-size: cover;
+  color: var(--gelos-gold);
+  color: #fff;
+}
+#carousel-slide-2{
+  background: url('../images/slide2.png') bottom right;
+  background-size: cover;
+}
+#carousel-controls{
+  margin: 10px auto;
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.carousel-controls__radio{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 50px;
+  height: 7px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.carousel-controls__radio:checked{
+  background: #fff;
+}
+/*
+* Section 1 end
+*
+* Section 2 start
+ */
+#section-2{
+ background: #fff;
+}
+#section-2-container{
+ padding: 50px 20px;
+}
+#section-2-container > h2{
+  margin-bottom: 50px;
+}
+#section-2-accordian-grid{
+ max-width: 1100px;
+}
+.section-2-accordian-item{
+ margin: 20px 0;
+ background: var(--gelos-blue-tint-a);
+ border-radius: 10px;
+}
+.accordian-heading{
+ padding: 20px 20px;
+}
+.accordian-content{
+ padding: 0;
+ height: 0;
+ line-height: var(--line-height);
+ transition: 0.3s ease;
+ opacity: 0;
+}
+.section-2-accordian-item > ol{
+ padding-left: 110px;
+}
+#accordian-list{
+ margin: 10px 0 0 25px;
+}
+.accordian-x{
+ position: absolute;
+ right: 50px;
+ margin-top: 25px;
+ width: 18px;
+ transition: transform 0.3s ease;
+}
+.x-checkbox:checked ~ .accordian-content{
+ padding: 0 20px 20px 20px;
+ height: auto;
+ animation: opacity 1s 0.3s ease forwards;
+ transition: 0.3s ease;
+}
+/*
+* Section 2 end
+*
+* Section 3 start
+*/
+#section-3{
+  background: var(--gelos-gold-tint);
+}
+#section-3-container h2{
+  padding: 50px 0 0 20px;
+  color: var(--gelos-charcoal);
+}
+#section-3-grid{
+  display: grid;
+  grid-template-areas:
+  "pic1 pic2 pic3"
+  "text1 text2 text3"
+  ;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  padding: 70px 20px 100px 20px;
+}
+.section-3-grid-item{
+  align-self: center;
+  text-align: center;
+}
+.section-3-grid-item h3{
+  margin-bottom: 10px;
+  color: var(--gelos-charcoal);
+}
+.section-3-grid-item p{
+  color: black;
+  line-height: var(--line-height);
+}
+.section-3-grid-pic svg{
+  width: 170px;
+  height: 170px;
+}
+.section-3-grid-pic{
+  margin: auto;
+  width: 170px;
+  height: 170px;
+}
+.section-3-grid-pic path{
+  fill: var(--gelos-gold-shade);
+}
+#section-3-grid-item1{
+  grid-area: text1;
+}
+#section-3-grid-item2{
+  grid-area: text2;
+}
+#section-3-grid-item3{
+  grid-area: text3;
+}
+#section-3-grid-pic1{
+  grid-area: pic1;
+}
+#section-3-grid-pic2{
+  grid-area: pic2;
+}
+#section-3-grid-pic3{
+  grid-area: pic3;
+}
+/*
+* Section 3 end
+*
+* Section 4 start
+*/
+#section-4-container{
+  display: grid;
+  grid-template-areas:
+  "contact form"
+  ;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  color: #fff;
+}
+#section-4-contact{
+  grid-area: contact;
+  padding: 0 20px;
+}
+#section-4-contact h2{
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+#section-4-contact p{
+  line-height: var(--line-height);
+  margin-bottom: 30px
+}
+#section-4-contact a{
+  padding: 5px 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+#section-4-contact a:hover{
+  background: white;
+  color: var(--gelos-charcoal);
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+#section-4-form{
+  grid-area: form;
+  margin-top: 105px;
+  padding: 0 30px;
+  max-width: 420px;
+}
+#name-input, #phone-input, #message-input{
+  font-family: inherit;
+  font-size: 1rem;
+}
+.form-input{
+  display: block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  width: calc(100% - 30px);
+}
+.form-label{
+  color: #fff;
+  margin-left: 15px;
+  display: block;
+}
+.submit-button{
+  display: block;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: none;
+  margin: auto;
+  background: rgba(255,255,255,0.9);
+  font-size: inherit;
+  cursor: pointer;
+}
+.submit-button:hover{
+  background: rgba(255,255,255,1);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+  transition: 0.2s ease;
+}
+/*
+* Section 4 end
+*
+* Animations and media queries
+*/
+@media only screen and (min-width: 1150px) {
+  .accordian-x, .x-checkbox{
+    margin-left: 1050px;
+    right: auto;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #section-4-container{
+    grid-template-areas:
+    "contact"
+    "form"
+    ;
+    grid-template-columns: 1fr;
+  }
+  #section-4-form{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .carousel-slide{
+    min-width: 375px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .carousel-slide{
+    min-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #section-3-grid{
+    grid-template-areas:
+    "pic1 text1"
+    "pic2 text2"
+    "pic3 text3"
+    ;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  .section-3-grid-item{
+    text-align: left;
+  }
+}
